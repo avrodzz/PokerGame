@@ -1,11 +1,15 @@
 # PokerGame
 
+
 <!-- Documentation - Classes Section Start -->
+
+### Documentation
+
 <details>
     <summary>
       <!-- <span style="font-size:1.25em"> -->
         <strong>Classes</strong>
-      </span>
+        <p></p>
     </summary>
     
 <!-- -->
@@ -15,11 +19,14 @@
 - [CardSprite](includes/classes/CardSprite/CardSprite.md)
 
 - [DeckSprite](includes/classes/DeckSprite/DeckSprite.md)
-
-
-  
-
-<!-- - [TemplateClass](includes/classes/templateClass.md) -->
-
     
 </details>
+
+---
+
+<!-- Reflection Documents -->
+### Reflections
+
+- [MostProud](includes/reflections/MostProud.md)
+
+- [ProjectAnalysis](includes/reflections/ProjectAnalysis.md)
