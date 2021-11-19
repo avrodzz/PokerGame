@@ -8,7 +8,9 @@
 
 <!-- Screenshots -->
 ###### Screenshot
-![CardSprite](../../images/cardSprite.png)
+<!-- ![CardSprite](../../images/cardSprite.png) -->
+
+<img src="../../images/cardSprite.png" alt="CardSprite" width="300"/>
 
 <!-- Usage -->
 
