@@ -10,9 +10,9 @@
 ###### Screenshots
 <!-- ![CardSprite](../../images/cardSprite.png) -->
 
-<img src="../../images/deckSprite_in_order.png" alt="DeckSprite_In_Order" width="400"/>
+<img src="../../images/deckSprite_in_order.png" alt="DeckSprite_In_Order" width="500"/>
 
-<img src="../../images/deckSprite_shuffled.png" alt="DeckSprite_Shuffled" width="400"/>
+<img src="../../images/deckSprite_shuffled.png" alt="DeckSprite_Shuffled" width="500"/>
 
 <!-- Imports -->
 ###### Imports
