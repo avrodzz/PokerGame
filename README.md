@@ -14,6 +14,8 @@
 
 - [CardSprite](includes/classes/CardSprite/CardSprite.md)
 
+- [DeckSprite](includes/classes/DeckSprite/DeckSprite.md)
+
 
   
 

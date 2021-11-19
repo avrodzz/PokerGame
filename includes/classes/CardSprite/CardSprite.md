@@ -7,10 +7,18 @@
 >A CardSprite has all attributes of a Card object and also has pygame sprite qualities.
 
 <!-- Screenshots -->
-###### Screenshot
+###### Screenshots
 <!-- ![CardSprite](../../images/cardSprite.png) -->
 
 <img src="../../images/cardSprite.png" alt="CardSprite" width="300"/>
+
+
+<!-- Imports -->
+###### Imports
+```python
+import pygame
+from Card import Card
+```
 
 <!-- Usage -->
 
@@ -19,19 +27,11 @@
 ```python
 aceOfHearts = CardSprite('Ace', 'Hearts', 0, 0, True)
 ```
-<!-- Imports -->
-###### Imports
-```python
-import pygame
-from Card import Card
-```
 
 <!-- Instance Variables -->
 ###### Instance Variables
 | Name          | Data Type | Description                                                |
 | ------------- | --------- | ---------------------------------------------------------- |
-| `_value`      | string    | value of the card                                          |
-| `_suit`       | string    | suit of the card                                           |
 | `_images`     | string[]  | images for the front and back the card                     |
 | `_flipped`    | bool      | keeps track of whether the card is flipped or not          |
 | `_cardImage`  | Surface   | holds the image that will be loaded into the pygame Sprite |

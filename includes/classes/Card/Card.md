@@ -9,6 +9,12 @@
 <!-- Screenshots -->
 <!-- ![NameOfClassImage](/assets/images/imageName.png) -->
 
+<!-- Imports -->
+###### Imports
+```python
+none
+```
+
 <!-- Usage -->
 
 ###### Usage
@@ -16,11 +22,7 @@
 ```python
 aceOfHearts = Card('Ace', 'Hearts')
 ```
-<!-- Imports -->
-###### Imports
-```python
-none
-```
+
 
 <!-- Instance Variables -->
 ###### Instance Variables
