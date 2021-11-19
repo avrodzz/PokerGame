@@ -14,12 +14,12 @@
 ###### Usage
 
 ```python
-    aceOfHearts = Card('Ace', 'Hearts)
+aceOfHearts = Card('Ace', 'Hearts')
 ```
 <!-- Imports -->
 ###### Imports
 ```python
-    none
+none
 ```
 
 <!-- Instance Variables -->
@@ -29,19 +29,6 @@
 | `_value`     | string    | value of the card | 
 | `_suit` | string    | suit of the card | 
 
-
-
-<!-- Member Variables
-
-###### Member Variables
-| Name              | Data Type |
-| ----------------- | --------- |
-| `memberVariable1` | string    |
-| `memberVariable2` | number    |
-| `memberVariable3` | number    |
-| ...               | ...       | -->
-
-<!-- (Member Functions / Methods) -->
 
 ###### Methods
 

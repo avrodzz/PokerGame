@@ -12,6 +12,11 @@
 
 - [Card](includes/classes/Card/Card.md)
 
+- [CardSprite](includes/classes/CardSprite/CardSprite.md)
+
+
+  
+
 <!-- - [TemplateClass](includes/classes/templateClass.md) -->
 
     

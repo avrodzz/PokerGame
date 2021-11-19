@@ -48,10 +48,12 @@ class Card:
 
     ## Accessor (Getter)
     #  @return the numeric value of self._value
+    #
     def getNumericValue(self):
         return int(Card.FILEVALUES[self._value])
 
     # Prints the string value and suit of the Card
     #  @return example: 'Ace of Hearts'
+    #
     def __repr__(self):
         return self._value + ' of ' + self._suit
