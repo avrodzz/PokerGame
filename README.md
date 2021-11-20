@@ -16,6 +16,8 @@
 
 - [Card](includes/classes/Card/Card.md)
 
+- [CardHandSprite](includes/classes/CardHandSprite/CardHandSprite.md)
+
 - [CardSprite](includes/classes/CardSprite/CardSprite.md)
 
 - [DeckSprite](includes/classes/DeckSprite/DeckSprite.md)
