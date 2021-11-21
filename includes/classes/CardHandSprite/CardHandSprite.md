@@ -78,6 +78,8 @@ hand.draw(screen)
 
 [`setPosition(self,x,y)`](methods/setPosition.md)
 
+[`move(self,x,y)`](methods/move.md)
+
 [`centerOnScreen(self,screenWidth,screenHeight)`](methods/centerOnScreen.md)
 
 

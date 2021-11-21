@@ -30,18 +30,27 @@ class GameText:
         self._gameTextRect.x = x
         self._gameTextRect.y = y
 
+    # Moves the GameText object by an offset of x and y
+    #  @param x (float) the x offset
+    #  @param y (float) the y offset
+    #
+    def move(self, x, y):
+        self._gameTextRect.x += x
+        self._gameTextRect.y += y
+
     # Set position of text to the center of the screen by default
     #  Other options include 'top_left', 'left_center', 'bottom_left'
     #                        'top_center', 'center', 'bottom_center',
     #                        'top_right', 'right_center', 'bottom_right'
     #  @param screenWidth (float) the width of the screen
     #  @param screenHeight (float) the height of the screen
+    #  @param location (string) the desired location of the text
     #
     def centerOnScreen(self, screenWidth, screenHeight, location='center'):
         center_x_pos = screenWidth / 2 - (self._gameTextRect.size[0] / 2)
         center_y_pos = screenHeight / 2 - (self._gameTextRect.size[1] / 2)
-        bottom_y_pos = screenHeight - self._gameTextRect.size[1] + 10
-        right_x_pos = screenWidth - self._gameTextRect.size[0] + 2
+        bottom_y_pos = screenHeight - self._gameTextRect.size[1]
+        right_x_pos = screenWidth - self._gameTextRect.size[0]
         if location == 'top_left':
             self.setPosition(
                 0, 0

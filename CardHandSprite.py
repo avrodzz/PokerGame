@@ -76,10 +76,59 @@ class CardHandSprite:
             temp.setPosition(currentCardSprite.getRect().x + i *
                              CardSprite.XOFFSET, currentCardSprite.getRect().y)
 
+    # Moves the CardHandSprite object by an offset of x and y
+    #  @param x (float) the x offset
+    #  @param y (float) the y offset
+    #
+    def move(self, x, y):
+        currentCardSprite = self._hand[0]
+        self.setPosition(currentCardSprite.getRect().x + x,
+                         currentCardSprite.getRect().y + y)
+
     # Set position of all cards in hand to the center of the screen
     #  @param screenWidth (float) the width of the screen
     #  @param screenHeight (float) the height of the screen
     #
-    def centerOnScreen(self, screenWidth, screenHeight):
-        self.setPosition(screenWidth / 2 - (CardSprite.XOFFSET *
-                         (self.getNumOfCards() / 2)), screenHeight / 2 - CardSprite.YOFFSET / 2)
+    def centerOnScreen(self, screenWidth, screenHeight, location='center'):
+        # self.setPosition(screenWidth / 2 - (CardSprite.XOFFSET *
+        #                  (self.getNumOfCards() / 2)), screenHeight / 2 - CardSprite.YOFFSET / 2)
+        center_x_pos = screenWidth / 2 - \
+            (CardSprite.XOFFSET * (self.getNumOfCards() / 2))
+        center_y_pos = screenHeight / 2 - CardSprite.YOFFSET / 2
+        bottom_y_pos = screenHeight - CardSprite.YOFFSET
+        right_x_pos = screenWidth - CardSprite.XOFFSET * self.getNumOfCards()
+        if location == 'top_left':
+            self.setPosition(
+                0, 0
+            )
+        elif location == 'left_center':
+            self.setPosition(
+                0, center_y_pos
+            )
+        elif location == 'bottom_left':
+            self.setPosition(
+                0, bottom_y_pos
+            )
+        elif location == 'top_center':
+            self.setPosition(
+                center_x_pos, 0
+            )
+        elif location == 'center':
+            self.setPosition(
+                center_x_pos, center_y_pos)
+        elif location == 'bottom_center':
+            self.setPosition(
+                center_x_pos, bottom_y_pos
+            )
+        elif location == 'top_right':
+            self.setPosition(
+                right_x_pos, 0
+            )
+        elif location == 'right_center':
+            self.setPosition(
+                right_x_pos, center_y_pos
+            )
+        elif location == 'bottom_right':
+            self.setPosition(
+                right_x_pos, bottom_y_pos
+            )

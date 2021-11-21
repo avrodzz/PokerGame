@@ -3,6 +3,7 @@
 # Last Changed: November 17, 2021
 
 
+from pygame import font
 from Card import Card
 from CardSprite import CardSprite
 from DeckSprite import DeckSprite
@@ -19,7 +20,7 @@ def main():
     background_color = (255, 166, 43)
 
     SCREEN_WIDTH = 1000
-    SCREEN_HEIGHT = 500
+    SCREEN_HEIGHT = 700
 
     # Define the dimensions of
     # screen object(width,height)
@@ -45,13 +46,29 @@ def main():
 
     hand.centerOnScreen(SCREEN_WIDTH, SCREEN_HEIGHT)
 
-    Color_line = (255, 0, 0)
-
-    tempX = hand.getHand()
-
     text = GameText(message='TEXAS HOLD\'EM', fontSize=75)
 
     text.centerOnScreen(SCREEN_WIDTH, SCREEN_HEIGHT, 'top_center')
+
+    playerText = GameText(message='PLAYER', fontSize=50)
+    playerText.centerOnScreen(SCREEN_WIDTH, SCREEN_HEIGHT, 'bottom_left')
+
+    playerHand = CardHandSprite()
+    for i in range(2):
+        playerHand.addCard(deck)
+
+    playerHand.centerOnScreen(SCREEN_WIDTH, SCREEN_HEIGHT, 'bottom_left')
+    playerHand.move(0, -CardSprite.YOFFSET / 2)
+
+    aiText = GameText(message='AI', fontSize=50)
+    aiText.centerOnScreen(SCREEN_WIDTH, SCREEN_HEIGHT, 'bottom_right')
+
+    aiHand = CardHandSprite()
+    for i in range(2):
+        aiHand.addCard(deck)
+
+    aiHand.centerOnScreen(SCREEN_WIDTH, SCREEN_HEIGHT, 'bottom_right')
+    aiHand.move(0, -CardSprite.YOFFSET / 2)
 
     # game loop
     while running:
@@ -66,6 +83,8 @@ def main():
         # aceOfHearts.draw(screen)
         # deck.draw(screen)
         hand.draw(screen)
+        playerHand.draw(screen)
+        aiHand.draw(screen)
 
         # for i in range(hand.getNumOfCards()):
         #     # print(tempX[i].getRect().x + CardSprite.XOFFSET / 2)
@@ -81,6 +100,8 @@ def main():
         #                  (0, SCREEN_HEIGHT/2), (SCREEN_WIDTH, SCREEN_HEIGHT/2))
 
         text.draw(screen)
+        playerText.draw(screen)
+        aiText.draw(screen)
 
         # Update the display using flip
         pygame.display.flip()

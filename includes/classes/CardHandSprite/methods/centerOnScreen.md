@@ -7,11 +7,12 @@
 
 <!-- Parameters -->
 ###### Parameters
-| Name           | Data Type | Description              |
-| -------------- | --------- | ------------------------ |
-| `self`         |           |                          |
-| `screenWidth`  | float     | the width of the screen  |
-| `screenHeight` | float     | the height of the screen |
+| Name           | Data Type | Description                                                                                                                    |
+| -------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `self`         |           |                                                                                                                                |
+| `screenWidth`  | float     | the width of the screen                                                                                                        |
+| `screenHeight` | float     | the height of the screen                                                                                                       |
+| `location`     | string    | 'top_left', 'left_center', 'bottom_left', 'top_center', 'center', 'bottom_center', 'top_right', 'right_center', 'bottom_right' |
 
 <!-- Return Type -->
 ###### Return Type
