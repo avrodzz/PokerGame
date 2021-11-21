@@ -3,7 +3,7 @@
 # <code>setPosition(self,x,y)</code>
 
 <!-- Method Description -->
-> Moves the CardSprite object to the position (x,y).
+> Sets the x and y position of the top left corner of the text.
 
 <!-- Parameters -->
 ###### Parameters
@@ -20,12 +20,13 @@
 <!-- Method Example -->
 ###### Usage
 ```python
-# Position of card starts at (0,0) then moves to (1,3)
-card = CardSprite('Ace', 'Hearts', 0, 0)    
-card.move(1, 3)
-# Position of card moves to (1,0)
-card.setPosition(1, 0)
+# Position of text starts at (0,0)
+text = GameText(message='Test') 
+
+# Position of card moves to (1,3)
+text.setPosition(1, 3)
+
 ```
 <!-- Back to className.md -->
 <!-- The path in this link will be the one that is used for the component -->
-[back](../CardSprite.md)
+[back](../GameText.md)

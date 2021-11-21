@@ -7,15 +7,18 @@ from Card import Card
 from CardSprite import CardSprite
 from DeckSprite import DeckSprite
 from CardHandSprite import CardHandSprite
+from GameText import GameText
 import pygame
 
 
 def main():
+    pygame.font.init()
+
     # Define the background colour
     # using RGB color coding.
     background_color = (255, 166, 43)
 
-    SCREEN_WIDTH = 500
+    SCREEN_WIDTH = 1000
     SCREEN_HEIGHT = 500
 
     # Define the dimensions of
@@ -46,6 +49,10 @@ def main():
 
     tempX = hand.getHand()
 
+    text = GameText(message='TEXAS HOLD\'EM', fontSize=75)
+
+    text.centerOnScreen(SCREEN_WIDTH, SCREEN_HEIGHT, 'top_center')
+
     # game loop
     while running:
 
@@ -59,16 +66,21 @@ def main():
         # aceOfHearts.draw(screen)
         # deck.draw(screen)
         hand.draw(screen)
+
         # for i in range(hand.getNumOfCards()):
         #     # print(tempX[i].getRect().x + CardSprite.XOFFSET / 2)
         #     pygame.draw.line(screen, Color_line,
         #                      (tempX[i].getRect().x + CardSprite.XOFFSET / 2, 0), (tempX[i].getRect().x + CardSprite.XOFFSET / 2, SCREEN_HEIGHT))
 
         # CENTER VERTICAL LINE (NEON GREEN)
-        # pygame.draw.line(screen, (57, 255, 20), (SCREEN_WIDTH/2,0), (SCREEN_WIDTH/2, SCREEN_HEIGHT))
+        # pygame.draw.line(screen, (57, 255, 20), (SCREEN_WIDTH /
+        #                  2, 0), (SCREEN_WIDTH/2, SCREEN_HEIGHT))
 
         # CENTER HORIZONTAL LINE (NEON GREEN)
-        # pygame.draw.line(screen, (57, 255, 20), (0, SCREEN_HEIGHT/2), (SCREEN_WIDTH, SCREEN_HEIGHT/2))
+        # pygame.draw.line(screen, (57, 255, 20),
+        #                  (0, SCREEN_HEIGHT/2), (SCREEN_WIDTH, SCREEN_HEIGHT/2))
+
+        text.draw(screen)
 
         # Update the display using flip
         pygame.display.flip()
