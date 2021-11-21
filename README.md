@@ -21,6 +21,8 @@
 - [CardSprite](includes/classes/CardSprite/CardSprite.md)
 
 - [DeckSprite](includes/classes/DeckSprite/DeckSprite.md)
+
+- [GameText](includes/classes/GameText/GameText.md)
     
 </details>
 
