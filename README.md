@@ -24,6 +24,8 @@
 
 - [GameText](includes/classes/GameText/GameText.md)
 
+- [HandScorer](includes/classes/HandScorer/HandScorer.md)
+
 - [PokerGameBaseConstants](includes/classes/PokerGameBaseConstants/PokerGameBaseConstants.md)
 
 - [Pot](includes/classes/Pot/Pot.md)

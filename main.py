@@ -4,16 +4,18 @@
 
 
 import pygame
+# from Card import Card
 from CardSprite import CardSprite
 from DeckSprite import DeckSprite
 from CardHandSprite import CardHandSprite
 from GameText import GameText
 from Pot import Pot
 from PokerGameBaseConstants import PokerGameBaseConstants
+from HandScorer import HandScorer
 
 
 def main():
-    pygame.font.init()
+    pygame.init()
 
     # Define the dimensions of
     # screen object(width,height)
@@ -83,6 +85,18 @@ def main():
         PokerGameBaseConstants.SCREEN_WIDTH, PokerGameBaseConstants.SCREEN_HEIGHT, 'bottom_center')
     playOptionText.move(0, -CardSprite.YOFFSET // 2 +
                         (-CardSprite.XOFFSET // 2))
+
+    # exHand = CardHandSprite()
+    # exHand.addCard(Card('King','Clubs'))
+    # exHand.addCard(Card('Queen','Clubs'))
+    # exHand.addCard(Card('Ace','Clubs'))
+    # exHand.addCard(Card('Jack','Clubs'))
+    # exHand.addCard(Card('Ten','Clubs'))
+
+    # exhandScore = HandScorer()
+    # print(exhandScore._checkHand(exHand,exHand))
+
+
 
     # game loop
     while running:

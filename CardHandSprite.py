@@ -15,10 +15,13 @@ class CardHandSprite:
         self._hand = []
         self._numFaceUp = 0
 
+    # # For HandScorer Testing Purposes only
+    # def addCard(self, card):
+    #     self._hand.append(card)
+
     # Adds a CardSprite object to the CardSprite list (self._hand)
     #  @param deck (DeckSprite) the deck of CardSprites
     #
-
     def addCard(self, deck):
         cardSpriteTemp = deck.dealCard()
         # print(cardSpriteTemp)
