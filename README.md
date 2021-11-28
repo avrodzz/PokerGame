@@ -23,6 +23,10 @@
 - [DeckSprite](includes/classes/DeckSprite/DeckSprite.md)
 
 - [GameText](includes/classes/GameText/GameText.md)
+
+- [PokerGameBaseConstants](includes/classes/PokerGameBaseConstants/PokerGameBaseConstants.md)
+
+- [Pot](includes/classes/Pot/Pot.md)
     
 </details>
 

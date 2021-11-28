@@ -1,4 +1,3 @@
-import pygame
 from CardSprite import CardSprite
 
 # A CardHandSprite is a hand of x amount of cards.

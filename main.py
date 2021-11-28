@@ -1,36 +1,30 @@
 # Alexis Rodriguez
 # Poker Game
-# Last Changed: November 17, 2021
+# Last Changed: November 27, 2021
 
 
-from pygame import font
-from Card import Card
+import pygame
 from CardSprite import CardSprite
 from DeckSprite import DeckSprite
 from CardHandSprite import CardHandSprite
 from GameText import GameText
-import pygame
+from Pot import Pot
+from PokerGameBaseConstants import PokerGameBaseConstants
 
 
 def main():
     pygame.font.init()
 
-    # Define the background colour
-    # using RGB color coding.
-    background_color = (255, 166, 43)
-
-    SCREEN_WIDTH = 1000
-    SCREEN_HEIGHT = 700
-
     # Define the dimensions of
     # screen object(width,height)
-    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    screen = pygame.display.set_mode(
+        (PokerGameBaseConstants.SCREEN_WIDTH, PokerGameBaseConstants.SCREEN_HEIGHT))
 
     # Set the caption of the screen
     pygame.display.set_caption('Poker Game')
 
     # Fill the background colour to the screen
-    screen.fill(background_color)
+    screen.fill(PokerGameBaseConstants.TABLE_RGB)
 
     # Variable to keep our game loop running
     running = True
@@ -41,34 +35,54 @@ def main():
     deck = DeckSprite()
     deck.shuffle()
 
-    for i in range(5):
+    for i in range(PokerGameBaseConstants.NUM_OF_CARDS_IN_BOARD):
         hand.addCard(deck)
 
-    hand.centerOnScreen(SCREEN_WIDTH, SCREEN_HEIGHT)
+    hand.centerOnScreen(PokerGameBaseConstants.SCREEN_WIDTH,
+                        PokerGameBaseConstants.SCREEN_HEIGHT)
 
-    text = GameText(message='TEXAS HOLD\'EM', fontSize=75)
+    text = GameText(message=PokerGameBaseConstants.TITLE_TEXT,
+                    fontSize=PokerGameBaseConstants.TITLE_FONT_SIZE)
 
-    text.centerOnScreen(SCREEN_WIDTH, SCREEN_HEIGHT, 'top_center')
+    text.centerOnScreen(PokerGameBaseConstants.SCREEN_WIDTH,
+                        PokerGameBaseConstants.SCREEN_HEIGHT, 'top_center')
 
-    playerText = GameText(message='PLAYER', fontSize=50)
-    playerText.centerOnScreen(SCREEN_WIDTH, SCREEN_HEIGHT, 'bottom_left')
+    playerText = GameText(
+        message='PLAYER', fontSize=PokerGameBaseConstants.PLAYER_FONT_SIZE)
+    playerText.centerOnScreen(PokerGameBaseConstants.SCREEN_WIDTH,
+                              PokerGameBaseConstants.SCREEN_HEIGHT, 'bottom_left')
 
     playerHand = CardHandSprite()
-    for i in range(2):
+    for i in range(PokerGameBaseConstants.NUM_OF_CARDS_IN_HAND):
         playerHand.addCard(deck)
 
-    playerHand.centerOnScreen(SCREEN_WIDTH, SCREEN_HEIGHT, 'bottom_left')
+    playerHand.centerOnScreen(PokerGameBaseConstants.SCREEN_WIDTH,
+                              PokerGameBaseConstants.SCREEN_HEIGHT, 'bottom_left')
     playerHand.move(0, -CardSprite.YOFFSET / 2)
 
-    aiText = GameText(message='AI', fontSize=50)
-    aiText.centerOnScreen(SCREEN_WIDTH, SCREEN_HEIGHT, 'bottom_right')
+    aiText = GameText(
+        message='AI', fontSize=PokerGameBaseConstants.PLAYER_FONT_SIZE)
+    aiText.centerOnScreen(PokerGameBaseConstants.SCREEN_WIDTH,
+                          PokerGameBaseConstants.SCREEN_HEIGHT, 'bottom_right')
 
     aiHand = CardHandSprite()
-    for i in range(2):
+    for i in range(PokerGameBaseConstants.NUM_OF_CARDS_IN_HAND):
         aiHand.addCard(deck)
 
-    aiHand.centerOnScreen(SCREEN_WIDTH, SCREEN_HEIGHT, 'bottom_right')
+    aiHand.centerOnScreen(PokerGameBaseConstants.SCREEN_WIDTH,
+                          PokerGameBaseConstants.SCREEN_HEIGHT, 'bottom_right')
     aiHand.move(0, -CardSprite.YOFFSET / 2)
+
+    pot = Pot(amount=PokerGameBaseConstants.MINIMUM_WAGE)
+    pot.centerOnScreen(PokerGameBaseConstants.SCREEN_WIDTH,
+                       PokerGameBaseConstants.SCREEN_HEIGHT, 'bottom_center')
+
+    playOptionText = GameText(
+        message='[C]heck [R]aise [F]old', fontSize=PokerGameBaseConstants.GENERAL_FONT_SIZE)
+    playOptionText.centerOnScreen(
+        PokerGameBaseConstants.SCREEN_WIDTH, PokerGameBaseConstants.SCREEN_HEIGHT, 'bottom_center')
+    playOptionText.move(0, -CardSprite.YOFFSET // 2 +
+                        (-CardSprite.XOFFSET // 2))
 
     # game loop
     while running:
@@ -92,16 +106,18 @@ def main():
         #                      (tempX[i].getRect().x + CardSprite.XOFFSET / 2, 0), (tempX[i].getRect().x + CardSprite.XOFFSET / 2, SCREEN_HEIGHT))
 
         # CENTER VERTICAL LINE (NEON GREEN)
-        # pygame.draw.line(screen, (57, 255, 20), (SCREEN_WIDTH /
-        #                  2, 0), (SCREEN_WIDTH/2, SCREEN_HEIGHT))
+        # pygame.draw.line(screen, (57, 255, 20), (PokerGameBaseConstants.SCREEN_WIDTH /
+        #                  2, 0), (PokerGameBaseConstants.SCREEN_WIDTH/2, PokerGameBaseConstants.SCREEN_HEIGHT))
 
         # CENTER HORIZONTAL LINE (NEON GREEN)
         # pygame.draw.line(screen, (57, 255, 20),
-        #                  (0, SCREEN_HEIGHT/2), (SCREEN_WIDTH, SCREEN_HEIGHT/2))
+        #                  (0, PokerGameBaseConstants.SCREEN_HEIGHT/2), (PokerGameBaseConstants.SCREEN_WIDTH, PokerGameBaseConstants.SCREEN_HEIGHT/2))
 
         text.draw(screen)
         playerText.draw(screen)
         aiText.draw(screen)
+        pot.draw(screen)
+        playOptionText.draw(screen)
 
         # Update the display using flip
         pygame.display.flip()
