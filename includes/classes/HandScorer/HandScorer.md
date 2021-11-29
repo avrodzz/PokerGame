@@ -84,6 +84,8 @@ print(exhandScore._checkHand(board,hand))
 
 [`_royalFlush(self,allCards)`](methods/_royalFlush.md)
 
+[`highCard(self,board,hand)`](methods/highCard.md)
+
 </ul>
 
 ---

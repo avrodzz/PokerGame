@@ -223,3 +223,27 @@ class HandScorer:
                 temp[card.getNumericValue()] = 1
 
         return self._straightFlush(allCards) and 1 in temp and 10 in temp
+
+    # Determines the highest card value in a hand
+    #  @param board (CardHandSprite) the cards in the board
+    #  @param hand (CardHandSprite) the cards in the hand
+    #  @return (int) the number corresponding with the highest score
+    #
+    def highCard(self, board, hand):
+        # Sets cannot have repeated items
+        allCards = set()
+
+        # Adds all card options from board and hand
+        for i in range(len(board.getHand())):
+            allCards.add(board.getHand()[i])
+        for i in range(len(hand.getHand())):
+            allCards.add(hand.getHand()[i])
+
+        highestValue = 0
+        # Checks every card value in the set of cards and returns the highest one
+        for card in allCards:
+            if card.getNumericValue() == 1:
+                return 14
+            if card.getNumericValue() > highestValue:
+                highestValue = card.getNumericValue()
+        return highestValue
