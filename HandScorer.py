@@ -8,7 +8,7 @@ class HandScorer:
     ## Accessor (Getter)
     #  @param board (CardHandSprite) the cards in the board
     #  @param hand (CardHandSprite) the cards in the hand
-    #  @return self._checkHand(board,hand) (boolean) the score of the hand
+    #  @return self._checkHand(board,hand) (int) the score of the hand
     #
     def getScore(self, board, hand):
         return self._checkHand(board, hand)
