@@ -1,25 +1,28 @@
 <!-- Method Name -->
 
-# <code>getRect(self)</code>
+# <code>resetScore(self)</code>
 
 <!-- Method Description -->
-> Accessor (Getter): Gets the x- and y- coordinates of the text.
+> Mutator (Setter): Sets the score back to zero.
 
 <!-- Parameters -->
 ###### Parameters
-| Name     | Data Type | Description                                     |
-| -------- | --------- | ----------------------------------------------- |
-| `self`   |           |                                                 |
+| Name   | Data Type | Description |
+| ------ | --------- | ----------- |
+| `self` |           |             |
 
 <!-- Return Type -->
 ###### Return Type
-`Rect`
+`void`
 
 <!-- Method Example -->
 ###### Usage
 ```python
-text = GameText(message='Test') 
-rect = text.getRect()
+# Constructs HandScorer object
+handscorer = HandScorer() 
+
+# Resets back to zero
+handscorer.resetScore()
 ```
 <!-- Back to className.md -->
 <!-- The path in this link will be the one that is used for the component -->

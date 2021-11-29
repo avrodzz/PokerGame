@@ -1,25 +1,28 @@
 <!-- Method Name -->
 
-# <code>getRect(self)</code>
+# <code>_threeOfAKind(self,allcards)</code>
 
 <!-- Method Description -->
-> Accessor (Getter): Gets the x- and y- coordinates of the text.
+> Checks if there is three of a kind (three of the same value) in the set of cards.
 
 <!-- Parameters -->
 ###### Parameters
-| Name     | Data Type | Description                                     |
-| -------- | --------- | ----------------------------------------------- |
-| `self`   |           |                                                 |
+| Name       | Data Type | Description                                        |
+| ---------- | --------- | -------------------------------------------------- |
+| `self`     |           |                                                    |
+| `allCards` | set       | the set of cards that is being checked for a three of a kind |
 
 <!-- Return Type -->
 ###### Return Type
-`Rect`
+`bool`
 
 <!-- Method Example -->
 ###### Usage
 ```python
-text = GameText(message='Test') 
-rect = text.getRect()
+# Private class method
+# If true then return a score of 4
+if self._straight(allCards):
+    return 4
 ```
 <!-- Back to className.md -->
 <!-- The path in this link will be the one that is used for the component -->

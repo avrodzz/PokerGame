@@ -1,25 +1,28 @@
 <!-- Method Name -->
 
-# <code>getRect(self)</code>
+# <code>_twoPair(self,allcards)</code>
 
 <!-- Method Description -->
-> Accessor (Getter): Gets the x- and y- coordinates of the text.
+> Checks if there is a two of a kind but TWICE in the set of cards.
 
 <!-- Parameters -->
 ###### Parameters
-| Name     | Data Type | Description                                     |
-| -------- | --------- | ----------------------------------------------- |
-| `self`   |           |                                                 |
+| Name       | Data Type | Description                                        |
+| ---------- | --------- | -------------------------------------------------- |
+| `self`     |           |                                                    |
+| `allCards` | set       | the set of cards that is being checked for a two pair |
 
 <!-- Return Type -->
 ###### Return Type
-`Rect`
+`bool`
 
 <!-- Method Example -->
 ###### Usage
 ```python
-text = GameText(message='Test') 
-rect = text.getRect()
+# Private class method
+# If true then return a score of 3
+if self._twoPair(allCards):
+    return 3
 ```
 <!-- Back to className.md -->
 <!-- The path in this link will be the one that is used for the component -->

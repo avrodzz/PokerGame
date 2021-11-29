@@ -1,25 +1,28 @@
 <!-- Method Name -->
 
-# <code>getRect(self)</code>
+# <code>_royalFlush(self,allcards)</code>
 
 <!-- Method Description -->
-> Accessor (Getter): Gets the x- and y- coordinates of the text.
+> Checks if there is a royal flush (A 10 J Q K and of the same suit) in the set of cards.
 
 <!-- Parameters -->
 ###### Parameters
-| Name     | Data Type | Description                                     |
-| -------- | --------- | ----------------------------------------------- |
-| `self`   |           |                                                 |
+| Name       | Data Type | Description                                        |
+| ---------- | --------- | -------------------------------------------------- |
+| `self`     |           |                                                    |
+| `allCards` | set       | the set of cards that is being checked for a royal flush |
 
 <!-- Return Type -->
 ###### Return Type
-`Rect`
+`bool`
 
 <!-- Method Example -->
 ###### Usage
 ```python
-text = GameText(message='Test') 
-rect = text.getRect()
+# Private class method
+# If true then return a score of 10
+if self._royalFlush(allCards):
+    return 10
 ```
 <!-- Back to className.md -->
 <!-- The path in this link will be the one that is used for the component -->
