@@ -1,5 +1,7 @@
 # PokerGame
 
+<img src="../PokerGame/includes/images/pokerGameBase.png" alt="PokerGameBase" width="600"/> 
+
 
 <!-- Documentation - Classes Section Start -->
 
@@ -25,6 +27,8 @@
 - [GameText](includes/classes/GameText/GameText.md)
 
 - [HandScorer](includes/classes/HandScorer/HandScorer.md)
+
+- [PokerGameBase](includes/classes/PokerGameBase/PokerGameBase.md)
 
 - [PokerGameBaseConstants](includes/classes/PokerGameBaseConstants/PokerGameBaseConstants.md)
 
