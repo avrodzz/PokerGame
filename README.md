@@ -1,6 +1,8 @@
 # PokerGame
 
-<img src="../PokerGame/includes/images/pokerGameBase.png" alt="PokerGameBase" width="600"/> 
+<img src="includes/images/pokerGameBase.png" alt="PokerGameBase" width="600"/> 
+
+---
 
 
 <!-- Documentation - Classes Section Start -->
