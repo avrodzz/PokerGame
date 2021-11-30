@@ -10,7 +10,7 @@
 ###### Screenshots
 <!-- ![CardSprite](../../images/cardSprite.png) -->
 
-<img src="../../images/pokerGameBase.png" alt="PokerGameBase" width="600"/> 
+<img src="../../images/pokerGameBase.png" alt="PokerGameBase" width="500"/> 
 
 
 
